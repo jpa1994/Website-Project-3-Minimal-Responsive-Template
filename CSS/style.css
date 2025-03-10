@@ -1,5 +1,6 @@
 body {
-    font-family: 'Open Sans' ,Arial, Helvetica, sans-serif
+    font-family: 'Open Sans' ,Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 /* HEADER */
@@ -9,14 +10,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0%;
-    margin-right: 0%;
-    margin-left: 5%;
+    margin-right: 4%;
+    margin-left: 4%;
 }
 
 .logo {
     display: flex;
+    position: relative;
     align-items: end;
-    bottom: 21px;
 }
 
 .logo img {
@@ -32,18 +33,14 @@ header {
 
 }
 
-nav ul {
-    gap: 2%;
-}
-
 nav li {
     display: inline;
-    margin-right: 2%;
+    margin-right: 5%;
 }
 
 nav {
     position: relative;
-    right: -5%;
+    right: -9%;
     width: 42%;
 }
 
@@ -57,12 +54,14 @@ nav a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: #498ae3;
+    text-underline-offset: auto;
 }
 
 nav a:active {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: #498ae3;
+    text-underline-offset: auto;
 }
 
 /* COLORED CIRCLES */
@@ -72,6 +71,7 @@ nav a:active {
 }
 
 .coloredCircles {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -81,14 +81,17 @@ nav a:active {
     flex: 1 2;
 }
 
+.circleImg {
+    top: 9%;
+}
+
 .coloredCircles h3 {
     color: #4990f1;
-    font-weight: 500;
 }
 
 .coloredCircles p {
     position: relative;
-    margin: 0% 13%;
+    margin: 0% 17%;
     bottom: 6%;
     color: #979797;
 }
@@ -113,20 +116,24 @@ nav a:active {
 .blueShopping {
     align-content: center;
     text-align: center;
+    position: relative;
 }
 
 .blueShopping h2 {
     color: #727476;
+    font-weight: 500;
 }
 
 .blueText {
     position: relative;
-    right: 3px;
+    margin: 1%;
+    right: 1px;
     top: 9%;
 }
 
 .blueText h2 {
     color: #727476;
+    font-weight: 500;
     font-size: medium
 }
 
@@ -146,4 +153,164 @@ footer p {
     font-size: small;
     text-align: center;
     color: #a2a2a2;
+}
+
+/* @MEDIA */
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .circleImg {
+        position: relative;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .blueText {
+        left: 2%;
+    }
+}
+
+@media screen and (min-width: 437px) and (max-width: 768px) {
+    nav {
+        width: 49%;
+        right: 2px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        top: 20px;
+        right: 2%;
+    }
+
+    .logo {
+        top: 25px;
+        left: 5%;
+    }
+
+    .coloredCircles img {
+        width: 170px;
+    }
+
+    .blueShopping img {
+        width: 320px;
+    }
+
+    .blueText {
+        right: 1%;
+    }
+
+    nav a:hover {
+        text-underline-offset: 15px;
+    }
+
+    nav a:active {
+        text-underline-offset: 15px;
+    }
+
+    footer {
+        margin-top: 0%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        left: 8%;
+    }
+
+    .coloredCircles {
+        margin: 0% 5%;
+
+    }
+    
+    .coloredCircles :nth-child(1) {
+        position: relative;
+        bottom: 6px;
+    }
+    
+    .coloredCircles .circlesDiv {
+        margin: 0% -5%;
+    }
+
+    .coloredCircles h3 {
+        font-size: medium;
+    }
+
+    .coloredCircles p {
+        font-size: small;
+    }
+
+    .blueShopping {
+        left: 3%;
+    }
+
+    .blueShopping h2 {
+        font-weight: 500;
+        font-size: xx-large;
+    }
+
+    .blueShopping img {
+        width: 380px;
+    }
+
+    .blueText {
+        right: 5%;
+    }
+
+    .blueText h2 {
+        font-weight: 500;
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    .coloredCircles img {
+        width: 200px;
+    }
+
+    .blueShopping {
+        left: 8%;
+    }
+
+    .blueShopping h2 {
+        font-weight: 500;
+        font-size: xx-large;
+    }
+
+    .blueShopping img {
+        width: 390px;
+    }
+
+    .blueText {
+        right: 11%;
+    }
+
+    .blueText h2 {
+        font-weight: 500;
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        right: 9%;
+    }
+
+    nav {
+        right: -4%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .logo {
+        left: 10%;
+    }
+
+    .blueShopping {
+        left: 15%;
+    }
+    
+    .blueText {
+        right: 17%;
+    }
 }
